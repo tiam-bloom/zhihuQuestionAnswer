@@ -2,7 +2,7 @@
 # @Time : 2024/3/16 12:42
 # @Auther : Tiam
 # @File : get_ip
-# @Project : 20240315-python查错
+# @Project : 20240315-python知乎回答评论抓取
 # @Desc :
 import requests
 from lxml import html, etree

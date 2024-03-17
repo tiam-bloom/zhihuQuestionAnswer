@@ -2,7 +2,7 @@
 # @Time : 2024/3/16 14:02
 # @Auther : Tiam
 # @File : test03
-# @Project : 20240315-python查错
+# @Project : 20240315-python知乎回答评论抓取
 # @Desc :  生成签名
 
 
@@ -33,7 +33,7 @@ def get_x_zse_96(val):
     m = hashlib.md5()
     m.update(val.encode('utf-8'))
 
-    with open('zhihuvmp.js', 'r') as s:
+    with open('../../zhihuvmp.js', 'r') as s:
         ctx1 = execjs.compile(s.read())
     encrypt_str = ctx1.call('get_zse_96', m.hexdigest())
     return encrypt_str
@@ -72,7 +72,6 @@ def question_feeds(question_id):
     print('url', url)
     # 构建签名
     signature_param = get_signature_param(path)
-
     x_zse_96 = get_x_zse_96(signature_param)
     print('x_zse_96: ', x_zse_96)
 

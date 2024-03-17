@@ -2,7 +2,7 @@
 # @Time : 2024/3/15 23:29
 # @Auther : Tiam
 # @File : test01.py
-# @Project : 20240315-python查错
+# @Project : 20240315-python知乎回答评论抓取
 # @Desc : https://www.2177.com.cn/a/112.html
 
 
@@ -28,7 +28,7 @@ def get_x_zse_96(val):
 
     m.update(val.encode('utf-8'))
 
-    with open('zhihuvmp.js', 'r') as s:
+    with open('../../zhihuvmp.js', 'r') as s:
         ctx1 = execjs.compile(s.read(), cwd=r'/usr/local/lib/node_modules')
     encrypt_str = ctx1.call('get_zse_96', m.hexdigest())
     return encrypt_str

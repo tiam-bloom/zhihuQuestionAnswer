@@ -2,7 +2,7 @@
 # @Time : 2024/3/16 10:00
 # @Auther : Tiam
 # @File : test02
-# @Project : 20240315-python查错
+# @Project : 20240315-python知乎回答评论抓取
 # @Desc :
 import hashlib
 import json
@@ -31,7 +31,7 @@ def get_x_zse_96(val):
     m = hashlib.md5()
     m.update(val.encode('utf-8'))
 
-    with open('zhihuvmp.js', 'r') as s:
+    with open('../../zhihuvmp.js', 'r') as s:
         ctx1 = execjs.compile(s.read())
     encrypt_str = ctx1.call('get_zse_96', m.hexdigest())
     return encrypt_str

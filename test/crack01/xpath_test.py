@@ -2,7 +2,7 @@
 # @Time : 2024/3/16 13:11
 # @Auther : Tiam
 # @File : xpath_test
-# @Project : 20240315-python查错
+# @Project : 20240315-python知乎回答评论抓取
 # @Desc :
 from lxml import html
 
